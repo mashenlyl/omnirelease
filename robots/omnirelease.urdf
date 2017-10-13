@@ -1,0 +1,467 @@
+<robot
+  name="omnirelease">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0085801 -3.7954E-05 0.21672"
+        rpy="0 0 0" />
+      <mass
+        value="0.89182" />
+      <inertia
+        ixx="0.021823"
+        ixy="-1.5783E-05"
+        ixz="0.0018708"
+        iyy="0.022116"
+        iyz="8.8597E-06"
+        izz="0.011565" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.38 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_1_link">
+    <inertial>
+      <origin
+        xyz="-3.9527E-06 0.0080388 -0.0021151"
+        rpy="0 0 0" />
+      <mass
+        value="0.13181" />
+      <inertia
+        ixx="9.678E-05"
+        ixy="-9.3387E-09"
+        ixz="-3.4848E-09"
+        iyy="0.00016474"
+        iyz="-4.1137E-09"
+        izz="9.6787E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/wheel_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/wheel_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_1_joint"
+    type="continuous">
+    <origin
+      xyz="0.067501 0.11691 0.047921"
+      rpy="3.1416 0 2.618" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_1_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="wheel_2_link">
+    <inertial>
+      <origin
+        xyz="-5.1879E-06 0.0080388 -0.0021151"
+        rpy="0 0 0" />
+      <mass
+        value="0.13181" />
+      <inertia
+        ixx="9.678E-05"
+        ixy="-9.3385E-09"
+        ixz="-3.4857E-09"
+        iyy="0.00016474"
+        iyz="-4.1135E-09"
+        izz="9.6787E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/wheel_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/wheel_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.135 0 0.047921"
+      rpy="3.1416 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_2_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="wheel_3_link">
+    <inertial>
+      <origin
+        xyz="-3.9526E-06 0.0080388 -0.0021151"
+        rpy="0 0 0" />
+      <mass
+        value="0.13181" />
+      <inertia
+        ixx="9.678E-05"
+        ixy="-9.3386E-09"
+        ixz="-3.4848E-09"
+        iyy="0.00016474"
+        iyz="-4.1138E-09"
+        izz="9.6787E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/wheel_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/wheel_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_3_joint"
+    type="continuous">
+    <origin
+      xyz="0.067499 -0.11691 0.047921"
+      rpy="3.1416 0 0.5236" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_3_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="kinectv2_link">
+    <inertial>
+      <origin
+        xyz="0.00075402 0.00051627 0.035917"
+        rpy="0 0 0" />
+      <mass
+        value="0.78726" />
+      <inertia
+        ixx="0.004127"
+        ixy="-1.209E-05"
+        ixz="2.0669E-05"
+        iyy="0.00050417"
+        iyz="-1.2532E-06"
+        izz="0.0042383" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/kinectv2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/kinectv2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kinectv2_joint"
+    type="fixed">
+    <origin
+      xyz="-0.11 0.0075 0.54505"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="kinectv2_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="kinectv2_rgb_link">
+    <inertial>
+      <origin
+        xyz="-0.0025 1.3878E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035343" />
+      <inertia
+        ixx="3.9761E-07"
+        ixy="-2.2058E-24"
+        ixz="-6.6174E-24"
+        iyy="2.0617E-07"
+        iyz="1.7647E-23"
+        izz="2.0617E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/kinectv2_rgb_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/kinectv2_rgb_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kinectv2_rgb_joint"
+    type="fixed">
+    <origin
+      xyz="0.033 -0.095 0.039"
+      rpy="0 0 0" />
+    <parent
+      link="kinectv2_link" />
+    <child
+      link="kinectv2_rgb_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="kinectv2_rgb_opical_link">
+    <inertial>
+      <origin
+        xyz="-0.0025 1.3878E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035343" />
+      <inertia
+        ixx="3.9761E-07"
+        ixy="-2.2058E-24"
+        ixz="-6.6174E-24"
+        iyy="2.0617E-07"
+        iyz="1.7647E-23"
+        izz="2.0617E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/kinectv2_rgb_opical_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/kinectv2_rgb_opical_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kinectv2_rgb_opical_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="kinectv2_rgb_link" />
+    <child
+      link="kinectv2_rgb_opical_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="kinectv2_depth_link">
+    <inertial>
+      <origin
+        xyz="-0.0025 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0015708" />
+      <inertia
+        ixx="7.854E-08"
+        ixy="-1.1029E-24"
+        ixz="0"
+        iyy="4.2542E-08"
+        iyz="1.0756E-40"
+        izz="4.2542E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/kinectv2_depth_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/kinectv2_depth_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kinectv2_depth_joint"
+    type="fixed">
+    <origin
+      xyz="0.033 -0.045 0.039"
+      rpy="0 0 0" />
+    <parent
+      link="kinectv2_link" />
+    <child
+      link="kinectv2_depth_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="kinectv2_depth_opical_link">
+    <inertial>
+      <origin
+        xyz="-0.0025 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0015708" />
+      <inertia
+        ixx="7.854E-08"
+        ixy="-1.1029E-24"
+        ixz="0"
+        iyy="4.2542E-08"
+        iyz="1.0756E-40"
+        izz="4.2542E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/kinectv2_depth_opical_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://omnirelease/meshes/kinectv2_depth_opical_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kinectv2_depth_opical_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="kinectv2_depth_link" />
+    <child
+      link="kinectv2_depth_opical_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
